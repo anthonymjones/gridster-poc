@@ -444,6 +444,12 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-gridster2@^6.0.5:
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/angular-gridster2/-/angular-gridster2-6.0.5.tgz#26f98737ccafdd838e56d68547e50c6c07b30241"
+  dependencies:
+    tslib "^1.9.0"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -3993,6 +3999,12 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ng-animate@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/ng-animate/-/ng-animate-0.3.3.tgz#b3a42482c6697727276f4876b1cdc1e81805f51a"
+  dependencies:
+    tslib "^1.9.0"
 
 no-case@^2.2.0:
   version "2.3.2"
