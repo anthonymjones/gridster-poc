@@ -1,0 +1,155 @@
+@import '~@angular/material/theming';
+
+$hach-blue: #4197d5;
+$hach-green: #a2af36;
+$hach-orange: #ef8433;
+
+$hach-blue-range: (
+  50 : #e8f3fa,
+  100 : #c6e0f2,
+  200 : #a0cbea,
+  300 : #7ab6e2,
+  400 : #5ea7db,
+  500 : #4197d5,
+  600 : #3b8fd0,
+  700 : #3284ca,
+  800 : #2a7ac4,
+  900 : #1c69ba,
+  A100 : #f1f7ff,
+  A200 : #bedbff,
+  A400 : #8bbfff,
+  A700 : #71b1ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$hach-green-range: (
+    50 : #f4f5e7,
+    100 : #e3e7c3,
+    200 : #d1d79b,
+    300 : #bec772,
+    400 : #b0bb54,
+    500 : #a2af36,
+    600 : #9aa830,
+    700 : #909f29,
+    800 : #869622,
+    900 : #758616,
+    A100 : #f4ffbc,
+    A200 : #ebff89,
+    A400 : #e3ff56,
+    A700 : #dfff3c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$hach-orange-range: (
+  50 : #fdf0e7,
+  100 : #fadac2,
+  200 : #f7c299,
+  300 : #f4a970,
+  400 : #f19652,
+  500 : #ef8433,
+  600 : #ed7c2e,
+  700 : #eb7127,
+  800 : #e86720,
+  900 : #e45414,
+  A100 : #ffffff,
+  A200 : #ffe9e0,
+  A400 : #ffc4ad,
+  A700 : #ffb194,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+$custom-typography: mat-typography-config(
+  $font-family: "Roboto",
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+@include mat-core($custom-typography);
+
+// Define the default theme
+$hach-primary: mat-palette($hach-blue-range);
+$hach-accent: mat-palette($hach-green-range);
+$hach-warn: mat-palette($hach-orange-range);
+$hach-theme: mat-light-theme($hach-primary, $hach-accent, $hach-warn);
+
+// uncomment below to include various components
+//
+@include mat-core-theme($hach-theme);
+// @include mat-autocomplete-theme($hach-theme);
+@include mat-button-theme($hach-theme);
+// @include mat-button-toggle-theme($hach-theme);
+// @include mat-card-theme($hach-theme);
+// @include mat-checkbox-theme($hach-theme);
+// @include mat-chips-theme($hach-theme);
+// @include mat-table-theme($hach-theme);
+// @include mat-datepicker-theme($hach-theme);
+@include mat-dialog-theme($hach-theme);
+// @include mat-divider-theme($hach-theme);
+// @include mat-expansion-panel-theme($hach-theme);
+@include mat-form-field-theme($hach-theme);
+// @include mat-grid-list-theme($hach-theme);
+@include mat-icon-theme($hach-theme);
+@include mat-input-theme($hach-theme);
+// @include mat-list-theme($hach-theme);
+// @include mat-menu-theme($hach-theme);
+// @include mat-paginator-theme($hach-theme);
+// @include mat-progress-bar-theme($hach-theme);
+// @include mat-progress-spinner-theme($hach-theme);
+// @include mat-radio-theme($hach-theme);
+// @include mat-select-theme($hach-theme);
+// @include mat-sidenav-theme($hach-theme);
+// @include mat-slide-toggle-theme($hach-theme);
+// @include mat-slider-theme($hach-theme);
+// @include mat-stepper-theme($hach-theme);
+// @include mat-tabs-theme($hach-theme);
+// @include mat-toolbar-theme($hach-theme);
+// @include mat-tooltip-theme($hach-theme);
+// @include mat-snack-bar-theme($hach-theme);
