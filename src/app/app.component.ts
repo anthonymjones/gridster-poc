@@ -6,6 +6,10 @@ import {
   DisplayGrid
 } from 'angular-gridster2';
 
+import { MatIconRegistry } from '@angular/material';
+// import { MatDialogRef } from '@angular/material/dialog';
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,9 +17,21 @@ import {
 })
 export class AppComponent implements OnInit {
   wobble: any;
-  title = 'app';
+  title = 'Dashboard POC';
   options: GridsterConfig;
   dashboard: Array<GridsterItem>;
+
+  constructor(
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer,
+  ) {
+    // icons
+    const iconPath = '../assets/icons/';
+    iconRegistry.addSvgIcon('add', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-add-24px.svg'));
+    iconRegistry.addSvgIcon('drag-indicator', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-reorder-24px.svg'));
+    iconRegistry.addSvgIcon('settings', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-settings-20px.svg'));
+    iconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-close-24px.svg'));
+  }
 
   static itemChange(item, itemComponent) {
     console.info('itemChanged', item, itemComponent);
@@ -52,6 +68,11 @@ export class AppComponent implements OnInit {
 
   removeItem(item) {
     this.dashboard.splice(this.dashboard.indexOf(item), 1);
+  }
+
+  itemSettings(item) {
+    // TODO
+    console.log('show settings for item', item);
   }
 
   addItem() {
