@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 
-import { MatButtonModule, MatIconModule } from '@angular/material';
-import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
+import {
+  MatButtonModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatToolbarModule
+} from '@angular/material';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 export const materialModules = [
   MatButtonModule,
+  MatDialogModule,
+  MatFormFieldModule,
   MatIconModule,
   MatDialogModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatInputModule
 ];
 
 const matDialogDefaults = {

@@ -33,6 +33,24 @@ export class AppComponent implements OnInit {
     iconRegistry.addSvgIcon('drag-indicator', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-reorder-24px.svg'));
     iconRegistry.addSvgIcon('settings', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-settings-20px.svg'));
     iconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-close-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'map',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'outline-map-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'link',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'outline-link-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'weather',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'outline-wb_sunny-24px.svg'
+      )
+    );
   }
 
   static itemChange(item, itemComponent) {
@@ -70,6 +88,11 @@ export class AppComponent implements OnInit {
 
   removeItem(item) {
     this.dashboard.splice(this.dashboard.indexOf(item), 1);
+  }
+
+  onAddItem(gridsterItem) {
+    console.log(gridsterItem);
+    this.dashboard.push({ ...gridsterItem, x: 0, y: 0, cols: 1, rows: 1 });
   }
 
   itemSettings(item) {
