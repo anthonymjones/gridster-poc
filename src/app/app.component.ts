@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, useAnimation } from '@angular/animations';
-import { wobble } from 'ng-animate';
 import {
   GridsterConfig,
   GridsterItem,
@@ -11,17 +9,7 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [
-    trigger('wobble', [
-      transition(
-        '* => *',
-        useAnimation(wobble, {
-          params: { timing: 5 }
-        })
-      )
-    ])
-  ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   wobble: any;
