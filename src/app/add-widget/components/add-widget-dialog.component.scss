@@ -1,0 +1,35 @@
+.container {
+  .widget-options {
+    display: flex;
+    justify-content: space-around;
+
+    .widget-option {
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+      0 1px 3px 1px rgba(60, 64, 67, 0.149);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      mat-icon {
+       transform: scale(4);
+      }
+    }
+  }
+}
+
+.container2 {
+  display: flex;
+  height: 100%;
+
+
+  .widget-location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+}
