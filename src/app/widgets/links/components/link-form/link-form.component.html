@@ -1,0 +1,47 @@
+<h4>{{headerLabel}} link</h4>
+
+<form
+  [formGroup]="formGroup"
+  (submit)="save.emit({valid: formGroup.valid, link: modifiedLink})"
+>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="URL"
+      type="text"
+      formControlName="href"
+      class="gridster-item-content"
+    >
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Text"
+      type="text"
+      formControlName="text"
+      class="gridster-item-content"
+    >
+  </mat-form-field>
+
+  <div class="error-container">
+    <span
+      *ngIf="showErrors && !formGroup.valid"
+      class="invalid"
+    >
+      URL is required.
+    </span>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">
+    Save
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="cancel.emit()"
+    type="button"
+    *ngIf="showCancelButton"
+  >
+    Cancel
+  </button>
+</form>

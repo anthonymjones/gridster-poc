@@ -9,7 +9,7 @@ import {
 import { MatIconRegistry } from '@angular/material';
 // import { MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
-import { OpenWeatherMapComponent } from './open-weather-map/components/open-weather-map/open-weather-map.component';
+import { OpenWeatherMapComponent } from './widgets/open-weather-map/components/open-weather-map/open-weather-map.component';
 
 @Component({
   selector: 'app-root',
@@ -71,6 +71,24 @@ export class AppComponent implements OnInit {
       'weather',
       sanitizer.bypassSecurityTrustResourceUrl(
         iconPath + 'outline-wb_sunny-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'moreVertical',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-more_vert-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'edit',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-edit-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'delete',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-delete-24px.svg'
       )
     );
   }

@@ -9,22 +9,20 @@ import { AppComponent } from './app.component';
 import { AddWidgetDialogComponent } from './add-widget/components/add-widget-dialog.component';
 import { MaterialModule } from './material.module';
 import { AddWidgetComponent } from './add-widget/container/add-widget.component';
-import { OpenWeatherMapComponent } from './open-weather-map/components/open-weather-map/open-weather-map.component';
 import { WidgetOptionsComponent } from './widget-options/container/widget-options.component';
 import { WidgetOptionsDialogComponent } from './widget-options/components/widget-options-dialog/widget-options-dialog.component';
+import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddWidgetComponent,
     AddWidgetDialogComponent,
-    OpenWeatherMapComponent,
     WidgetOptionsComponent,
     WidgetOptionsDialogComponent
   ],
   entryComponents: [
     AddWidgetDialogComponent,
-    OpenWeatherMapComponent,
     WidgetOptionsDialogComponent
   ],
   imports: [
@@ -33,7 +31,8 @@ import { WidgetOptionsDialogComponent } from './widget-options/components/widget
     GridsterModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    WidgetsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
