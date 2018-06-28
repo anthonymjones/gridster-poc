@@ -6,9 +6,10 @@ import {
   DisplayGrid
 } from 'angular-gridster2';
 
-import { MatIconRegistry } from '@angular/material';
+import { MatIconRegistry, MatDialog } from '@angular/material';
 // import { MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
   constructor(
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer,
+    public dialog: MatDialog
   ) {
     // icons
     const iconPath = '../assets/icons/';
@@ -71,8 +73,10 @@ export class AppComponent implements OnInit {
   }
 
   itemSettings(item) {
-    // TODO
     console.log('show settings for item', item);
+    this.dialog.open(SettingsDialogComponent, {
+      data: item.settings
+    });
   }
 
   addItem() {

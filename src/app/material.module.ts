@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 
 import { MatButtonModule, MatIconModule } from '@angular/material';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 export const materialModules = [
   MatButtonModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatToolbarModule
 ];
+
+const matDialogDefaults = {
+  hasBackdrop: true,
+  width: '450px'
+};
 
 @NgModule({
   imports: [...materialModules],
-  exports: [...materialModules]
+  exports: [...materialModules],
+  providers: [
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: matDialogDefaults }
+  ]
 })
 export class MaterialModule {}

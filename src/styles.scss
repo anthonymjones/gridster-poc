@@ -3,3 +3,13 @@
 @import 'app/styles/global';
 
 @import 'app/styles/custom-material-theme';
+
+// GLOBAL
+
+.mat-dialog-container {
+	background: white;
+  font-size: .9em;
+}
+.spacer {
+  flex: 1 1 auto;
+}
