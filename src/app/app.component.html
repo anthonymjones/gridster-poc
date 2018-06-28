@@ -9,11 +9,13 @@
         <button mat-icon-button (click)="itemSettings(item)">
           <mat-icon aria-label="settings" svgIcon="settings"></mat-icon>
         </button>
+        <br>
+        <span>{{ item?.widgetType }} for {{ item?.widgetLocation }}</span>
       </div>
     </gridster-item>
   </gridster>
 
-  <button mat-raised-button color="primary" (click)="addItem()">add</button>
+  <app-add-widget (addItem)="onAddItem($event)"></app-add-widget>
   <button mat-raised-button color="accent" (click)="loadGrid()">load</button>
   <button mat-raised-button color="warn" (click)="saveGrid()">save</button>
 

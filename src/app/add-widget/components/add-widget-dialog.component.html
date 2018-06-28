@@ -1,0 +1,18 @@
+<div class="container" [@slideInOut] *ngIf="!selectedType">
+  <h2>Select a Widget Type</h2>
+  <div class="widget-options">
+    <div class="widget-option" *ngFor="let widget of widgetTypes" (click)="select(widget.type)">
+      <mat-icon aria-label="test" [svgIcon]="widget.type" [color]="widget.color"></mat-icon>
+    </div>
+  </div>
+</div>
+<div class="container2" [@slideInOut] *ngIf="selectedType">
+  <div class="widget-location">
+    <mat-form-field>
+      <input matInput placeholder="Where?" [formControl]="location">
+    </mat-form-field>
+    <br>
+    <button mat-button color="primary" (click)="add()">Add Widget</button>
+    <button class="back-button" mat-button (click)="deselect()">Back</button>
+  </div>
+</div>
