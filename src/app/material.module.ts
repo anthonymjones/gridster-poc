@@ -5,8 +5,10 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
   MatMenuModule
 } from '@angular/material';
+
 
 export const materialModules = [
   MatButtonModule,
@@ -14,6 +16,7 @@ export const materialModules = [
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
   MatMenuModule
 ];
 

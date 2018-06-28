@@ -1,0 +1,27 @@
+<!-- TODO: Provide order up/down buttons for screen readers (No dragging) -->
+<mat-icon
+  aria-label="drag"
+  svgIcon="drag-indicator"
+  class="drag-handle gridster-item-content"
+></mat-icon>
+<a [href]="link.href" target="_blank">{{link.text || link.href}}</a>
+<button
+  [ngClass]="{hidden: !showOptionsKebob}"
+  class="kebob"
+  mat-icon-button
+  aria-label="more"
+  [matMenuTriggerFor]="menu"
+>
+  <mat-icon svgIcon="moreVertical"></mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="edit.emit(link.id)">
+    <mat-icon aria-label="edit" svgIcon="edit"></mat-icon>
+    <span>Edit</span>
+  </button>
+  <button mat-menu-item (click)="delete.emit(link.id)">
+    <mat-icon aria-label="delete" svgIcon="delete"></mat-icon>
+    <span>Delete</span>
+  </button>
+</mat-menu>

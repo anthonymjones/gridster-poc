@@ -463,6 +463,10 @@ angular-gridster2@^6.0.5:
   dependencies:
     tslib "^1.9.0"
 
+angular-sortablejs@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/angular-sortablejs/-/angular-sortablejs-2.5.2.tgz#ffd651e47cc93a191db4c023f617db3789fd9af5"
+
 ansi-escapes@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.1.0.tgz#f73207bb81207d75fd6c83f125af26eea378ca30"
@@ -5824,6 +5828,10 @@ sockjs@0.3.19:
   dependencies:
     faye-websocket "^0.10.0"
     uuid "^3.0.1"
+
+sortablejs@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.7.0.tgz#80a2b2370abd568e1cec8c271131ef30a904fa28"
 
 source-list-map@^2.0.0:
   version "2.0.0"

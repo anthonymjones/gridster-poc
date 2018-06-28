@@ -1,0 +1,32 @@
+.container {
+  overflow: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+app-link-form {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  z-index: 1;
+  background-color: white;
+}
+
+app-link {
+  width: 100%;
+  height:100%;
+}
+
+mat-list-item {
+  padding-top: 5px;
+}
+
+mat-list-item:hover {
+  background-color: #F4F4F4;
+}
+
+button {
+  margin-top: 10px;
+}

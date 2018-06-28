@@ -1,0 +1,32 @@
+<div class="container">
+  <app-link-form
+    *ngIf="linkToEdit"
+    [headerLabel]="(isAddingNew || links.length === 0) ? 'Add' : 'Edit'"
+    [link]="linkToEdit"
+    [showErrors]="showErrors"
+    [showCancelButton]="links.length > 0"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  ></app-link-form>
+
+  <div [ngClass]="{hidden: linkToEdit || links.length === 0}">
+    <mat-list [sortablejs]="links" [sortablejsOptions]="sortOptions">
+      <mat-list-item
+        *ngFor="let link of links"
+          (mouseenter)="onLinkMouseEnter(link.id)"
+          (mouseleave)="onLinkMouseLeave(link.id)"
+        >
+          <app-link
+            [link]="link"
+            [showOptionsKebob]="hoveredLink === link.id"
+            (edit)="onEdit($event)"
+            (delete)="onDelete($event)"
+          ></app-link>
+      </mat-list-item>
+    </mat-list>
+
+    <button mat-raised-button color="primary" (click)="onAddNewLinkClick()">
+      <mat-icon aria-label="add link" svgIcon="add"></mat-icon> Add new link
+    </button>
+  </div>
+</div>
