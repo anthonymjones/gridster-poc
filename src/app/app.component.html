@@ -12,6 +12,9 @@
         <br>
         <span>{{ item?.widgetType }} for {{ item?.widgetLocation }}</span>
       </div>
+      <div *ngIf="item.component">
+        <ng-container *ngComponentOutlet="item.component"> </ng-container>
+      </div>
     </gridster-item>
   </gridster>
 

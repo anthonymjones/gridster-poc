@@ -1,0 +1,41 @@
+<div *ngIf="weatherResp; else elseBlock">
+  <h3>Current Weather at {{weatherResp.name}}</h3>
+  <mat-form-field appearance="outline">
+    <mat-label>Temperature</mat-label>
+    <input matInput readonly value="{{weatherResp.main.temp}} °F">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Wind</mat-label>
+    <input matInput readonly value="{{weatherResp.wind.speed}} MPH">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cloud Coverage</mat-label>
+    <input matInput readonly value="{{weatherResp.clouds.all}} %">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Wind</mat-label>
+    <input matInput readonly value="{{weatherResp.wind.speed}} MPH">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Humidity</mat-label>
+    <input matInput readonly value="{{weatherResp.main.humidity}} %">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Geocode (Lat)</mat-label>
+    <input matInput readonly value="{{weatherResp.coord.lat}} °">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Geocode (Lon)</mat-label>
+    <input matInput readonly value="{{weatherResp.coord.lon}} °">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Rain (3h)</mat-label>
+    <input matInput readonly value="{{(weatherResp.rain && weatherResp.rain['3h']) || 'none'}}">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Snow (3h)</mat-label>
+    <input matInput readonly value="{{(weatherResp.snow && weatherResp.snow['3h']) || 'none'}}">
+  </mat-form-field>
+</div>
+
+<ng-template #elseBlock>Waiting for response from server</ng-template>
