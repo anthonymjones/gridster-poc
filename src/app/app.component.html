@@ -2,15 +2,8 @@
 
   <gridster [options]="options">
     <gridster-item [item]="item" *ngFor="let item of dashboard; let i = index">
-      <div class="grid-item">
-        <button mat-icon-button (click)="removeItem(item)">
-          <mat-icon aria-label="remove" svgIcon="close"></mat-icon>
-        </button>
-        <button mat-icon-button (click)="itemSettings(item)">
-          <mat-icon aria-label="settings" svgIcon="settings"></mat-icon>
-        </button>
-        <br>
-        <span>{{ item?.widgetType }} for {{ item?.widgetLocation }}</span>
+      <div class="widget-header">
+        <app-widget-options [widgetItem]="item" (updateWidget)="updateItem(item, $event)" (removeWidget)="removeItem(item)"></app-widget-options>
       </div>
       <div *ngIf="item.component">
         <ng-container *ngComponentOutlet="item.component"> </ng-container>

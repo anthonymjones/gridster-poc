@@ -10,10 +10,23 @@ import { AddWidgetDialogComponent } from './add-widget/components/add-widget-dia
 import { MaterialModule } from './material.module';
 import { AddWidgetComponent } from './add-widget/container/add-widget.component';
 import { OpenWeatherMapComponent } from './open-weather-map/components/open-weather-map/open-weather-map.component';
+import { WidgetOptionsComponent } from './widget-options/container/widget-options.component';
+import { WidgetOptionsDialogComponent } from './widget-options/components/widget-options-dialog/widget-options-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, AddWidgetComponent, AddWidgetDialogComponent, OpenWeatherMapComponent],
-  entryComponents: [AddWidgetDialogComponent, OpenWeatherMapComponent],
+  declarations: [
+    AppComponent,
+    AddWidgetComponent,
+    AddWidgetDialogComponent,
+    OpenWeatherMapComponent,
+    WidgetOptionsComponent,
+    WidgetOptionsDialogComponent
+  ],
+  entryComponents: [
+    AddWidgetDialogComponent,
+    OpenWeatherMapComponent,
+    WidgetOptionsDialogComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

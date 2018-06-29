@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { GridsterConfig, GridsterItem, GridType, DisplayGrid } from 'angular-gridster2';
+import {
+  GridsterConfig,
+  GridsterItem,
+  GridType,
+  DisplayGrid
+} from 'angular-gridster2';
 
 import { MatIconRegistry } from '@angular/material';
 // import { MatDialogRef } from '@angular/material/dialog';
@@ -20,16 +25,36 @@ export class AppComponent implements OnInit {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     // icons
     const iconPath = '../assets/icons/';
-    iconRegistry.addSvgIcon('add', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-add-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'add',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-add-24px.svg'
+      )
+    );
     iconRegistry.addSvgIcon(
       'drag-indicator',
-      sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-reorder-24px.svg')
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-reorder-24px.svg'
+      )
     );
     iconRegistry.addSvgIcon(
       'settings',
-      sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-settings-20px.svg')
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-settings-20px.svg'
+      )
     );
-    iconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-close-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'close',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-close-24px.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'more',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        iconPath + 'baseline-more_vert-24px.svg'
+      )
+    );
     iconRegistry.addSvgIcon(
       'map',
       sanitizer.bypassSecurityTrustResourceUrl(
@@ -81,6 +106,10 @@ export class AppComponent implements OnInit {
 
   changedOptions() {
     this.options.api.optionsChanged();
+  }
+
+  updateItem(item, newLocation) {
+    item.widgetLocation = newLocation;
   }
 
   removeItem(item) {

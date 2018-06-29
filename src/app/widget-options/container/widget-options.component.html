@@ -1,0 +1,7 @@
+<span class="clickable" [matMenuTriggerFor]="menu">
+  <mat-icon aria-label="more" svgIcon="more"></mat-icon>
+</span>
+<mat-menu class="options-menu" #menu="matMenu">
+  <button mat-menu-item (click)="openDialog()">Options</button>
+  <button mat-menu-item (click)="removeWidget.emit()">Remove</button>
+</mat-menu>
