@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddWidgetComponent } from './add-widget.component';
+import { MaterialModule } from '../../material.module';
 
 describe('AddWidgetComponent', () => {
   let component: AddWidgetComponent;
@@ -8,9 +9,9 @@ describe('AddWidgetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddWidgetComponent ]
-    })
-    .compileComponents();
+      imports: [MaterialModule],
+      declarations: [AddWidgetComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('AddWidgetComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 });

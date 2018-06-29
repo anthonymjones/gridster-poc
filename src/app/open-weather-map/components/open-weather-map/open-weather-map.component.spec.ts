@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OpenWeatherMapComponent } from './open-weather-map.component';
+import { MaterialModule } from '../../../material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('OpenWeatherMapComponent', () => {
   let component: OpenWeatherMapComponent;
@@ -8,18 +10,19 @@ describe('OpenWeatherMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OpenWeatherMapComponent ]
-    })
-    .compileComponents();
+      imports: [MaterialModule, HttpClientModule],
+      declarations: [OpenWeatherMapComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(OpenWeatherMapComponent);
     component = fixture.componentInstance;
+    component.ngOnInit = jest.fn;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 });
