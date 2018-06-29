@@ -12,8 +12,7 @@ export class OpenWeatherMapService {
   /**
    * This is a private API key generated for the account: developers@briebug.com
    * Normally this would be stored in a more secure manner, but for the sake of speed
-   * and simplicity (and the fact that this is a private repo) this is being stored
-   * in source code.
+   * and simplicity this is being stored in source code.
    */
   private static readonly API_KEY = '851d468d603c3dc360dad053e597ab32';
   private static readonly BASE_URL = 'https://api.openweathermap.org/data/2.5';
