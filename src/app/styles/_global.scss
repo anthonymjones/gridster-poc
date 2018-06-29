@@ -11,3 +11,23 @@ body {
   height: 100vh;
   width: 100vw;
 }
+button.mat-fab:hover {
+  box-shadow: 0 3px 5px 2px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  transform: scale(1.1);
+  transition: all .25s;
+}
+button.mat-fab {
+  transition: all .25s;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+// overlay styles must be global
+.options-menu {
+  .mat-menu-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
