@@ -2,6 +2,7 @@ import { MatDialogRef } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { FormControl, Validators } from '@angular/forms';
+import { WidgetType } from '../../models';
 
 @Component({
   templateUrl: './add-widget-dialog.component.html',
@@ -19,7 +20,7 @@ import { FormControl, Validators } from '@angular/forms';
   ]
 })
 export class AddWidgetDialogComponent implements OnInit {
-  widgetTypes = [];
+  widgetTypeEnum = WidgetType;
   selectedType: string;
   location = new FormControl('', [Validators.required]);
 

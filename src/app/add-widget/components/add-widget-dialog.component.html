@@ -1,7 +1,7 @@
 <div class="container" [@slideInOut] *ngIf="!selectedType">
   <h2>Select a Widget Type</h2>
   <div class="widget-options">
-    <div class="widget-option" *ngFor="let widget of widgetTypes" (click)="select(widget.type)">
+    <div class="widget-option" *ngFor="let widget of widgetTypeEnum | enumToArray" (click)="select(widget.type)">
       <mat-icon aria-label="test" [svgIcon]="widget.type" [color]="widget.color"></mat-icon>
     </div>
   </div>

@@ -29,10 +29,22 @@ export class AppComponent implements OnInit {
   ) {
     // icons
     const iconPath = '../assets/icons/';
-    iconRegistry.addSvgIcon('add', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-add-24px.svg'));
-    iconRegistry.addSvgIcon('drag-indicator', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-reorder-24px.svg'));
-    iconRegistry.addSvgIcon('settings', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-settings-20px.svg'));
-    iconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-close-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'add',
+      sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-add-24px.svg')
+    );
+    iconRegistry.addSvgIcon(
+      'drag-indicator',
+       sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-reorder-24px.svg')
+    );
+    iconRegistry.addSvgIcon(
+      'settings',
+      sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-settings-20px.svg')
+    );
+    iconRegistry.addSvgIcon(
+      'close',
+      sanitizer.bypassSecurityTrustResourceUrl(iconPath + 'baseline-close-24px.svg')
+    );
     iconRegistry.addSvgIcon(
       'map',
       sanitizer.bypassSecurityTrustResourceUrl(

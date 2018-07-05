@@ -10,13 +10,15 @@ import { MaterialModule } from './material.module';
 import { AddWidgetComponent } from './add-widget/container/add-widget.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
+import { EnumToArrayPipe } from './pipes/enum-to-array.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddWidgetComponent,
     AddWidgetDialogComponent,
-    SettingsDialogComponent
+    SettingsDialogComponent,
+    EnumToArrayPipe
   ],
   entryComponents: [
     AddWidgetDialogComponent,

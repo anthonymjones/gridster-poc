@@ -1,6 +1,6 @@
 import { AddWidgetDialogComponent } from './../components/add-widget-dialog.component';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-add-widget',

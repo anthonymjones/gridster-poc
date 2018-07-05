@@ -5,6 +5,11 @@ export enum SettingsInputType {
   'Checkbox',
   'Select'
 }
+export enum WidgetType {
+  'Weather',
+  'Link',
+  'Map'
+}
 
 export interface SettingsPreference {
   type: SettingsInputType;
@@ -14,5 +19,6 @@ export interface SettingsPreference {
 
 export interface WidgetItem extends GridsterItem {
   title: string;
+  type: WidgetType;
   settings: Array<SettingsPreference>;
 }
